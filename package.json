@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "build": "set NODE_ENV=development&&webpack",
+    "watch": "set NODE_ENV=development&&webpack --watch",
+    "prestart": "set NODE_ENV=development&&webpack",
+    "start": "set NODE_ENV=development&&webpack serve",
+    "build:home": "set NODE_ENV=production&&webpack"
   },
   "author": "",
   "license": "ISC",
